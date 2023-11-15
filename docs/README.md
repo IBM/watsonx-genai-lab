@@ -34,3 +34,5 @@ The introductory page of the lab is broken down into the following sections:
 
 * [Martin Hickey](https://github.com/hickeyma)
 * [Tim Robinson](https://github.com/timroster)
+
+<img src="https://count.asgharlabs.io/count?p=/main_genai_page">

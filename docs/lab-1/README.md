@@ -120,3 +120,5 @@ When you click on the "View code", you will see output similar to the following 
 ![prompt lab code](../images/prompt-lab-code.png)
 
 Now that we have identified the model, parameters and prompt that we will use, lets move onto lab 2 where we will build the application using this information.
+
+<img src="https://count.asgharlabs.io/count?p=/lab1_genai_page">

@@ -140,7 +140,7 @@ Click **Apply**.
     * Set `parameters.min_new_tokens` to **50**
     * Set `parameters.repetition penalty` to **2**
     * Set `parameters.decoding_method` to **sample**
- 
+
     Click **Apply**.
 
    ![required model params](../images/assist-step46.png)
@@ -240,3 +240,5 @@ You most likely will see something different if you rerun for the same country b
 Experiment in the watsonx.ai prompt lab for other scenarios using different prompts and parameters, then create new actions and adjust the parameters for the new use case. Try it out!
 
 Continue exploring [watsonx Assistant](https://cloud.ibm.com/catalog/services/watson-assistant?cm_sp=ibmdev-_-developer-_-trial) and [watsonx.ai](https://dataplatform.cloud.ibm.com/registration/stepone?context=wx?cm_sp=ibmdev-_-developer-_-trial) to learn more features and functions.
+
+<img src="https://count.asgharlabs.io/count?p=/lab1_genai_page">
