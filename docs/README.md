@@ -1,6 +1,6 @@
 # Introduction
 
-## watsonx Generative AI Lab
+## Using generative AI to generate information for an application
 
 Welcome to our lab! In this lab we'll be using [watsonx](https://www.ibm.com/watsonx) to build an application which leverages [generative AI](https://developer.ibm.com/generative-ai-for-developers/?utm_medium=OSocial&utm_source=Event&utm_content=DEVWW&utm_term=watsonx&utm_id=watsonxevent) to generate information for the app. The goals of this lab are to:
 
@@ -21,10 +21,10 @@ The introductory page of the lab is broken down into the following sections:
 |  |  |
 | :--- | :--- |
 | [Lab 0: Pre-work](pre-work/README.md) | Pre-work for the project |
-| [Lab 1: Using Prompt Engineering to Identify the LLM for your Application](lab-1/README.md) | Learn how to use generative AI |
-| [Lab 2: Create your Application](lab-2/README.md) | Learn how to create an application that uses generative AI |
+| [Lab 1: Using prompt engineering to identify the LLM for your application](lab-1/README.md) | Learn how to use generative AI |
+| [Lab 2: Create your application which uses the LLM](lab-2/README.md) | Learn how to create an application that uses generative AI |
 
-## Technology Used
+## Technology used
 
 * [IBM Cloud](https://cloud.ibm.com)
 * [watsonx.ai](https://www.ibm.com/products/watsonx-ai)
