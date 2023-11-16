@@ -17,10 +17,6 @@ nav:
     - Lab 1. Using prompt engineering to identify the LLM for your application: lab-1/README.md
     - Lab 2. Create your application which uses the LLM: lab-2/README.md
 
-# Use extended CommonMark renderer
-# Ref to: https://github.com/isaacs/github/issues/1185
-markdown: GFM
-
 ## DO NOT CHANGE BELOW THIS LINE
 
 # Copyright
