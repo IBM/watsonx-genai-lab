@@ -22,7 +22,7 @@ The introductory page of the lab is broken down into the following sections:
 | :--- | :--- |
 | [Lab 0: Pre-work](pre-work/README.md) | Pre-work for the project |
 | [Lab 1: Using prompt engineering to identify the LLM for your application](lab-1/README.md) | Learn how to use generative AI |
-| [Lab 2: Create your application which uses the LLM](lab-2/README.md) | Learn how to create an application that uses generative AI |
+| [Lab 2: Create your application which uses LLM to generate information](lab-2/README.md) | Learn how to create an application that uses generative AI |
 
 ## Technology used
 
