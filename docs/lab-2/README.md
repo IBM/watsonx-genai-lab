@@ -1,4 +1,4 @@
-# Create your application which uses the LLM
+# Create your application which uses LLM to generate information
 
 The goal of this lab is to show how you can leverage [Generative AI](https://research.ibm.com/blog/what-is-generative-AI) in an application to bring value to the app. The application we are going to create is a travel chatbot app and we will use [watsonx Assistant](https://www.ibm.com/products/watsonx-assistant?cm_sp=ibmdev-_-developer-tutorials-_-product) to help simplify making the chatbot. For more information on creating chatbots using watsonx Assistant, see [watsonx chatbot lab](https://github.com/IBM/watsonx-chatbot-lab). As discussed in lab 1, we will use a [Large Language Model (LLM)](https://en.wikipedia.org/wiki/Large_language_model) to generate the travel information.
 

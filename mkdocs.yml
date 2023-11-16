@@ -15,7 +15,7 @@ nav:
   - Workshop:
     - Lab 0. Pre-work: pre-work/README.md
     - Lab 1. Using prompt engineering to identify the LLM for your application: lab-1/README.md
-    - Lab 2. Create your application which uses the LLM: lab-2/README.md
+    - Lab 2. Create your application which uses LLM to generate information: lab-2/README.md
 
 ## DO NOT CHANGE BELOW THIS LINE
 
