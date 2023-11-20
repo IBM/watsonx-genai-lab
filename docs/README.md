@@ -8,6 +8,8 @@ Welcome to our lab! In this lab we'll be using [watsonx](https://www.ibm.com/wat
 * Develop an application which uses the LLM (from prompt engineering) to generate relevant information
 * Understand the value of AI in your applications
 
+**Note**: The application we are going to create is a travel chatbot app and we will use [watsonx Assistant](https://www.ibm.com/products/watsonx-assistant?cm_sp=ibmdev-_-developer-tutorials-_-product) to help simplify making the chatbot.
+
 ### About these labs
 
 The introductory page of the lab is broken down into the following sections:
