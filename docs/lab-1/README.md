@@ -6,7 +6,9 @@ The goal of this lab is to show how you can use [prompt engineering](https://en.
 
 **Note:** The following images show actual results from [watsonx.ai](https://www.ibm.com/products/watsonx-ai) prompt lab. The slight gray text is what we provided to the model.  The blue highlighted text is how the model responded. Be aware that the outputs shown here may not exactly resemble the outputs you receive when using the prompt lab.
 
-## Step 1. Getting started
+## Steps
+
+### Step 1. Getting started
 
 ![watsonx.ai prompt lab](../images/watsonx-prompt-lab.png)
 
