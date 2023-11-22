@@ -1,12 +1,12 @@
 # Create your application which uses LLM to generate information
 
-The goal of this lab is to show how you can leverage [Generative AI](https://research.ibm.com/blog/what-is-generative-AI) in an application to bring value to the app. The application we are going to create is a travel chatbot app and we will use [watsonx Assistant](https://www.ibm.com/products/watsonx-assistant?cm_sp=ibmdev-_-developer-tutorials-_-product) to help simplify making the chatbot. For more information on creating chatbots using watsonx Assistant, see [watsonx chatbot lab](https://github.com/IBM/watsonx-chatbot-lab). As discussed in lab 1, we will use a [Large Language Model (LLM)](https://en.wikipedia.org/wiki/Large_language_model) to generate the travel information.
+The goal of this lab is to show how you can leverage [Generative AI](https://research.ibm.com/blog/what-is-generative-AI) in an application to bring value to the app. The application we are going to create is a travel chatbot app, and we will use [watsonx Assistant](https://www.ibm.com/products/watsonx-assistant?cm_sp=ibmdev-_-developer-tutorials-_-product) to help simplify making the chatbot. For more information on creating chatbots using watsonx Assistant, check out the [watsonx chatbot lab](https://github.com/IBM/watsonx-chatbot-lab). As discussed in Lab 1, we will use a [Large Language Model (LLM)](https://en.wikipedia.org/wiki/Large_language_model) to generate the travel information.
 
 ## Steps
 
 ### Step 1. Obtain the OpenAPI definition of the watsonx.ai generation endpoint
 
-Before you can add the integration for [watsonx.ai](https://www.ibm.com/products/watsonx-ai) to a watsonx Assistant virtual assistant (to enable LLM to be called from the chatbot), you must download the OpenAPI definition for the watsonx.ai foundation model inferencing service. An example definition file is available in the [Assistant toolkit](https://github.com/watson-developer-cloud/assistant-toolkit/tree/master/integrations/extensions/starter-kits/language-model-watsonx) GitHub repository. For this workshop, you use a version that is modified with the addition of support for the `decode_method` parameter of the API. Download this version of the [watsonx-openapi.json](files/watsonx-openapi.json) file to your workstation.
+Before you can add the integration between [watsonx.ai](https://www.ibm.com/products/watsonx-ai) and watsonx Assistant virtual assistant to enable a LLM to be called from the chatbot, you must use an OpenAPI definition for the watsonx.ai foundation model inferencing service. An example definition file is available in the [Assistant toolkit](https://github.com/watson-developer-cloud/assistant-toolkit/blob/master/integrations/extensions/starter-kits/language-model-watsonx/watsonx-openapi.json) GitHub repository. However, for this workshop, you'll use a version that is modified with additional support for the `decode_method` parameter of the API. Download this version of the [watsonx-openapi.json](files/watsonx-openapi.json) file to your workstation.
 
 **Note:** `servers.url` property should be set to the same IBM Cloud region as where your watsonx.ai and watsonx Assistant are deployed to.
 
@@ -14,7 +14,7 @@ Before you can add the integration for [watsonx.ai](https://www.ibm.com/products
 
 For initial experimentation with the integration, use a new virtual assistant. If you have a newly created watsonx Assistant service instance, it will not have any assistants defined. Create one using the **Create Assistant** wizard that uses the name `Travel App`, and then select `web` as the deployment location.
 
-The values that you provide in the other parts of the wizard do not matter. For a slightly opinionated step-by-step example of how to get a web assistant created, see the [Technical Sales watsonx Assistant 101 lab](https://vest.buildlab.cloud/en/watsonx/assistant/101) up to the point where you see the home page for the assistant. If you have other assistants defined already in your instance, add one following the [Adding more assistants](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-assistant-add).
+The values that you provide in the other parts of the wizard do not matter. For a slightly opinionated, step-by-step example of how to get a web assistant created, see the [Technical Sales watsonx Assistant 101 lab](https://vest.buildlab.cloud/en/watsonx/assistant/101) up to the point where you see the home page for the assistant. If you have other assistants defined already in your instance, add one by following the [Adding more assistants](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-assistant-add) documentation.
 
 ### Step 3. Create a watsonx.ai API key
 
@@ -56,7 +56,7 @@ If you have previously created an API key for calling watsonx.ai from a notebook
 
 7. Click **Add** in the lower-right corner of the new integration tile, and confirm **Add** when prompted.
 
-8. Review the Get started information, and click **Next**.
+8. Review the Get Started information, and click **Next**.
 
 9. In the Authentication panel, select `Oauth 2.0`, enter the API key that you created earlier, keep the remaining default values, then click **Next**.
    ![set authentication](../images/image-008.png)
@@ -100,12 +100,11 @@ This steps means a user can end the dialogue flow if they don't want information
 10. Name the next step `Call LLM for general country information` by clicking the pencil (edit) icon. In this step, select **with conditions**. In the **Conditions**, click the first item, click "Action step variables" and select **2. Information on country**. Click the third item and select **Yes**. Click **Set variable values**, and click **Set new value**. Then, click **New session variable**.
    ![step 4 set variable](../images/assist-step41.png)
 
-11. Call the variable `prompt`, **free text**, and click **Apply**.
+11. Call the variable `prompt` with type **free text**, and click **Apply**.
    ![step 4 add variable](../images/assist-step42.png)
 
-12. For the variable assignment `To`, select **Expression**, and type `"Tell me about the country "`, then `+` and finally `$`. After you paste this, a pull-down menu appears. Click "Action step variables" and select **1. Specify country**.
+12. For the variable assignment `To`, select **Expression**, and type `"Tell me about the country "`, then `+` and finally `$`. After you paste this, a pull-down menu appears. Click "Action step variables" and select **1. Specify country**. Click **Apply**.
     ![Prompt variable](../images/assist-step43.png)
-Click **Apply**.
 
 13. In the **And then** section, select **Use an extension**.
     ![use extension](../images/assist-step44.png)
@@ -119,7 +118,7 @@ Click **Apply**.
     * Set `parameters.min_new_tokens` to **50**
     * Set `parameters.repetition penalty` to **2**
     * Set `parameters.decoding_method` to **sample**
-    Click **Apply**.
+    * Click **Apply**.
    ![required model params](../images/assist-step46.png)
 
 16. Click **New Step**.
@@ -135,9 +134,8 @@ Click **Apply**.
 
 21. For the variable assignment `To`, select **Expression**, and type `$`. After you paste this, a pull-down menu appears. Select **watsonx (step 4)**.
     ![Result variable](../images/assist-step52.png)
-    Select **body.results**. The box fills in with the assignment for the `result_country_info` variable. Now append `[0].generated_text` to the expression.
+    Select **body.results**. The box fills in with the assignment for the `result_country_info` variable. Now append `[0].generated_text` to the expression and click **Apply**.
     ![Select generated text](../images/assist-step53.png)
-    Click **Apply**.
 
 22. The full expression for the variable should be displayed, as shown in the following image.
     ![Result variable assignment](../images/assist-step54.png)
