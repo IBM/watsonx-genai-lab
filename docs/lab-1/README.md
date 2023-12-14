@@ -1,3 +1,9 @@
+---
+title: Using Prompt Engineering for your Application
+description: Lab-1 of Generative AI
+logo: docs/images/ibm-blue-background.png
+---
+
 # Using Prompt Engineering to Identify the LLM for your Application
 
 [Generative AI](https://research.ibm.com/blog/what-is-generative-AI) refers to deep-learning models that can generate high-quality text, images, and other content based on the data they were trained on. A [Large Language Model (LLM)](https://en.wikipedia.org/wiki/Large_language_model) is a type of language model notable for its ability to achieve general-purpose language understanding and generation. The goal of this lab is to show how you can use [prompt engineering](https://en.wikipedia.org/wiki/Prompt_engineering) with LLMs in order to elicit more accurate, relevant, and context-aware responses. The specfic responses we want to get is travel information on countries which we want to levergae when building the application in the next lab, lab 2.

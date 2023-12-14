@@ -1,3 +1,8 @@
+---
+title: watsonx Generative AI Lab
+description: Overview and About watsonx Generative AI Lab
+logo: docs/images/ibm-blue-background.png
+---
 # Introduction
 
 ## watsonx Generative AI Lab

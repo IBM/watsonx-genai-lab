@@ -20,7 +20,7 @@ nav:
 ## DO NOT CHANGE BELOW THIS LINE
 
 # Copyright
-copyright: Copyright &copy; 2020 IBM Developer
+copyright: Copyright &copy; 2023- IBM Developer
 
 # Theme
 theme:
@@ -30,6 +30,7 @@ theme:
     code: IBM Plex Mono
   icon:
     logo: material/library
+  logo: images/ibm-blue-background.png
   features:
     - navigation.tabs
     #- navigation.instant
@@ -41,6 +42,7 @@ theme:
 # Plugins
 plugins:
   - search
+  - social
 
 # Customization
 extra:
