@@ -1,5 +1,5 @@
 ---
-title: Using Prompt Engineering for your Application
+title: Identify LLM for your App
 description: Lab-1 of Generative AI
 logo: docs/images/ibm-blue-background.png
 ---
