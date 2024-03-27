@@ -9,7 +9,7 @@ This section is broken up into the following steps:
 
 ## 1. Sign up for IBM Cloud
 
-Ensure you have an IBM Cloud ID as services and [Large Language Models (LLMs)](https://en.wikipedia.org/wiki/Large_language_model) will be deployed on the cloud.
+Ensure you have an [IBM Cloud](https://cloud.ibm.com/login) ID as services and [Large Language Models (LLMs)](https://en.wikipedia.org/wiki/Large_language_model) will be deployed on the cloud.
 
 ![IBM cloud sign up](../images/ibm-cloud-sign-up.png)
 
