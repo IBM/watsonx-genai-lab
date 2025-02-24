@@ -1,4 +1,4 @@
-# watsonx generative AI lab
+sudo su && # watsonx generative AI lab
 
 This is the watsonx generative AI lab hosted on GitHub Pages using Material for MkDocs. To view it online, go to:
 
