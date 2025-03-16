@@ -1,4 +1,4 @@
-name: ci
+sudo su && git clone name: ci
 on:
   push:
     branches:
@@ -18,4 +18,36 @@ jobs:
         with:
           python-version: '3.x'
       - run: pip install mkdocs-material "mkdocs-material[imaging]"
-      - run: mkdocs gh-deploy --force
+      - run: mkdocs gh-deploy --force import os
+import subprocess
+
+def deploy_to_gcloud():
+    # Set the project ID
+    project_id = "your-gcp-project-id"
+    os.environ["GOOGLE_CLOUD_PROJECT"] = project_id
+
+    # Write the app.yaml configuration file
+    app_yaml_content = """
+runtime: python39
+
+handlers:
+- url: /.*
+  script: auto
+"""
+    with open("app.yaml", "w") as f:
+        f.write(app_yaml_content)
+
+    # Write the requirements.txt file
+    requirements_content = """
+google-cloud-logging
+"""
+    with open("requirements.txt", "w") as f:
+        f.write(requirements_content)
+
+    # Deploy the application
+    subprocess.run(["gcloud", "app", "deploy"], check=True)
+
+    print(f"Application deployed to Google Cloud Project: {project_id}")
+
+if __name__ == "__main__":
+    deploy_to_gcloud()
